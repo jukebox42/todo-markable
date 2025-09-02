@@ -13,12 +13,25 @@ yarn start generate pages.json
 yarn start generate pages.json --output todo.pdf
 ```
 
-Commands
+Arguments
 - `--output` - Specify the output file. Defaults to `output.pdf`.
 - `--tall` - Specify if you want pages to be twice as tall as the screen size. Defaults to `false`.
 - `--remove-todo` - Removes the first "TODO" page. Defaults to `false`.
 - `--remove-notes` - Removes the ending notes page. Defaults to `false`.
 - `--debug` - Generates a `debug.html` file of the PDF. Useful for debugging... Defaults to `false`.
+
+The JSON file should resemble the following:
+
+```json
+{
+  "items": [
+    "First",
+    "Second",
+    "Third",
+    "Fourth"
+  ]
+}
+```
 
 ## Setup
 
