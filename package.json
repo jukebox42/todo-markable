@@ -1,0 +1,32 @@
+{
+  "name": "todo-markable",
+  "version": "1.0.0",
+  "description": "A CLI tool to generate a Remarkable-compatible PDF from a todo list.",
+  "main": "dist/index.js",
+  "bin": {
+    "todo-markable": "dist/index.js"
+  },
+  "scripts": {
+    "build": "rm -rf dist && tsc && mkdir -p dist/assets && cp src/assets/* dist/assets/",
+    "start": "node dist/index.js",
+    "dev": "ts-node src/index.ts",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "cli",
+    "node"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "handlebars": "^4.7.8",
+    "minimist": "^1.2.8",
+    "puppeteer": "^24.18.0"
+  },
+  "devDependencies": {
+    "@types/minimist": "^1.2.5",
+    "@types/node": "^20.11.24",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3"
+  }
+}

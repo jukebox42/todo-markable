@@ -1,0 +1,26 @@
+<div class="page">
+  <nav>
+    <ul>
+      <div class="starter">
+        <div class="starter-fill"></div>
+      </div>
+      {{#each items}}
+      <li class="{{#if (eq @index ../activeIndex)}}active{{/if}}">
+        <a href="#{{toAnchor this}}">
+          {{this}}
+        </a>
+      </li>
+      {{/each}}
+      <div class="ender">
+        <div class="ender-fill"></div>
+      </div>
+    </ul>
+  </nav>
+  <main>
+    <header>
+      <h1 id="{{toAnchor (lookup items activeIndex)}}">
+        {{lookup items activeIndex}}
+      </h1>
+    </header>
+  </main>
+</div>
